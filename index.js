@@ -1,0 +1,11 @@
+var date = document.getElementById("date");
+var day = document.getElementById("day");
+var month = document.getElementById("month");
+var year = document.getElementById("year");
+var today = new Date();
+var allMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var allDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+date.innerHTML = (today.getDate() < 10 ? "0" : "") + today.getDate();
+day.innerHTML = allDays[today.getDay()];
+month.innerHTML = allMonths[today.getMonth()];
+year.innerHTML = today.getFullYear().toString();
